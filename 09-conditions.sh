@@ -2,7 +2,7 @@
 
 Number=$1
 
-if[ $Number -ge 100 ]
+if [ $Number -ge 100 ]
 then
      echo "Given number is grater than 100 "
  else
