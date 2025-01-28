@@ -7,6 +7,7 @@ then
    echo "ERROR:: you must have to ecute the sudo access"
    exit 1
 fi
+
 dnf list installed mysql
 if [$? -ne 0]
 then
