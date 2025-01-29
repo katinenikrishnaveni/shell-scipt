@@ -1,9 +1,9 @@
 #!/bin/bash
 
 USERID=$(id -u)
-R="/e[31m"
-G="/e[32m"
-Y="/e[33m"
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
 validate(){
     if [ $1 -ne 0 ]
     then
