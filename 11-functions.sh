@@ -1,20 +1,24 @@
 #!/bin/bash
 
 USERID=$(id -u)
+R="/e[31m"
+G="/e[32m"
+Y="/e[33m"
+validate(){
+    if [ $1 -ne 0 ]
+    then
+       echo -e "$2 ......$R failure"
+       exit 1
+    else 
+       echo -e "$2.......$G Success"
+    fi      
+}
+
 if [ $USERID -ne 0 ]
 then 
    echo "ERROR::you must have to enter the sudo access"
    exit 1
 fi
-validate(){
-    if [ $1 -ne 0 ]
-    then
-       echo "$2 ......failure"
-       exit 1
-    else 
-       echo "$2.......Success"
-    fi      
-}
 
 dnf list installed mysql 
  if [ $? -ne 0 ]
@@ -22,7 +26,7 @@ dnf list installed mysql
      dnf install mysql -y
      validate $? "Installing MYsql"
  else
-    echo "Mysql is already installed"
+    echo -e "$Y Mysql is already installed"
 fi
 
 dnf list installed git
@@ -31,5 +35,5 @@ then
     dnf install git -y
     validate $? "Installing Git"
 else
-    echo "Git is already installed"
+    echo -e "$Y Git is already installed"
 fi                
