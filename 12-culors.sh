@@ -9,10 +9,10 @@ validate()
 {
  if [$1 -ne 0]
  then
-     echo -e"$2.....$R Failure"
+     echo -e "$2.....$R Failure"
      exit 1
  else
-     echo -e"$2....$G Success"
+     echo -e "$2....$G Success"
   fi  
 }      
 if [$USERID -ne 0]
@@ -27,7 +27,7 @@ then
    dnf install mysql -y
    validate $? "Installing mysql"
 else
-   echo -e"Already installed.....$Y mysql"
+   echo -e "Already installed.....$Y mysql"
 fi
 
 dnf list installed git
@@ -37,5 +37,5 @@ then
     dnf install git -y
     validate $? "Installing Git"
 else
-    echo -e"Alredy installed.......$Y git" 
+    echo -e "Alredy installed.......$Y git" 
 fi       
