@@ -22,6 +22,7 @@ validate()
 }   
 
 echo "Script excution started at::$Timestamp" &>>$Log_File_Name
+
 if [$USERID -ne 0]
 then
    echo "ERROR::you have to acess sudo"
@@ -29,6 +30,7 @@ then
 fi
 
 dnf list installed mysql &>>$Log_File_Name
+
 if [$? -ne 0]
 then  
    dnf install mysql -y &>>$Log_File_Name
