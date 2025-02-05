@@ -8,7 +8,7 @@ N="\e[0m"
 logs_folder="var/logs/shellscript.logs"
 log_file=$(echo $0 | cut -d "." -f1)
 Timestamp=$(date +%Y-%m-%d-%H-%M-%S)
-Log_File_Name="$logs_folder/$log_file-Timestamp.log"
+Log_File_Name="$logs_folder/$log_file-$Timestamp.log"
 
 validate()
 {
