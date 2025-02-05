@@ -39,3 +39,4 @@ then
 else
    echo -e "$Y Alredy installed $package"    
 fi   
+done
