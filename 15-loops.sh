@@ -35,8 +35,8 @@ dnf list installed $package &>>$Log_File_Name
 if [ $? -ne 0 ]
 then
     dnf install $package -y &>>$Log_File_Name
-    validate $? "Installing Package"
+    validate $? "Installing $Package"
 else
-   echo -e "$Y Alredy installed $package"    
+   echo -e "$package is alredy.....$Y Installed $N"    
 fi   
 done
