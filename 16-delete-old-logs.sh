@@ -32,9 +32,5 @@ fi
 
 
 file_to_delete=$(find $source_id -name "*.log" -mtime +14)
-echo "file is to be deleted"
+echo "file is to be deleted :$file_to_delete"
 
-while read -r file
-do
- echo $file
-done <$file_to_delete
