@@ -22,7 +22,7 @@ validate()
   fi  
 }   
 
-echo "Script excution started at::$Timestamp" &>>$Log_File_Name
+echo "Script excution started at::$Timestamp" 
 
 if [ $USERID -ne 0 ]
 then
