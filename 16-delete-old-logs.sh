@@ -5,8 +5,8 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
-source_file="/home/ec2-user/app-log"
-logs_folder="/var/log/shellscript-logs"
+source_id="/home/ec2-user/app-log"
+logs_folder="/var/log/shellscript-log"
 log_file=$(echo $0 | cut -d "." -f1)
 Timestamp=$(date +%Y-%m-%d-%H-%M-%S)
 Log_File_Name="$logs_folder/$log_file-$Timestamp.log"
@@ -30,9 +30,11 @@ then
    exit 1
 fi
 
-file_log=$(find $source_file -name "*.log" -mtime +14)
+
+file_to_delete=$(find $source_id -name "*.log" -mtime +14)
+echo "file is to be deleted"
 
 while read -r file
 do
  echo $file
-done <$file_log
+done <$file_to_delete
