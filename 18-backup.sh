@@ -20,18 +20,18 @@ usage(){
     exit 1
 }
 
-if [$# -lt 2]
+if [ $# -lt 2 ]
 then
     usage
 fi    
 
-if [!-d $source_id]
+if [ ! -d $source_id ]
 then
   echo "$R $source_id source file does not exist..please check it $N"
   exit 1
 fi
 
-if [! -d $dest_id]
+if [ ! -d $dest_id ]
 then
    echo "$R $dest1_id deoes not exit ...please check it $N"
    exit 1
@@ -58,5 +58,7 @@ then
     else 
         echo -e"$R zipfile not created..please check it $N"
         exit 1        
+     fi   
 else
    echo -e"$R files does not exist $N"   
+fi
