@@ -48,7 +48,7 @@ then
    echo "files are exist:$file"
    zipfile=$dest1_id/app-log-$TIMESTAMP.zip
    find $source_id -name "*.log" -mtime +14|zip -@ $zipfile
-   if [-f "$zipfile"]
+   if [ -f "$zipfile" ]
    then
       echo -e "$G zip file succesfully created older than $days"
       while read -r filepath
