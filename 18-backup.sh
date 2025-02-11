@@ -41,7 +41,7 @@ echo "Script excution started at::$Timestamp" >>$Log_File_Name
 
 file=$(find $source_id -name "*.log" -mtime +14)
 
-if [-n $file]
+if [ -n $file ]
 then
    echo "files are exist:$file"
    zipfile=$dest1_id/app-log-$TIMESTAMP.zip
