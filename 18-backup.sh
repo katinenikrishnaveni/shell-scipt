@@ -5,7 +5,7 @@ R="e[32m"
 y="\e[33m"
 N="\e[0m"
 
-logs_folder="/var/log/shellscript-log"
+logs_folder="/home/ec2-user/shellscript-log"
 log_file=$(echo $0 |awk -F "/" '{print $NF}'| cut -d "." -f1)
 Timestamp=$(date +%Y-%m-%d-%H-%M-%S)
 Log_File_Name="$logs_folder/$log_file-$Timestamp.log"
@@ -19,6 +19,8 @@ usage(){
     echo -e"$R usage:: sh 18-backup.sh <source_id> <dest_id> <days(optional)>"
     exit 1
 }
+
+mkdir -p /home/ec2-user/shellscript-logs
 
 if [ $# -lt 2 ]
 then
