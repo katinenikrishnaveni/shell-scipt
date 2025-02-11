@@ -27,13 +27,13 @@ fi
 
 if [ ! -d $source_id ]
 then
-  echo -e " $R $source_id source file does not exist..please check it $N "
+  echo -e "$source_id source file does not exist..please check it  "
   exit 1
 fi
 
 if [ ! -d $dest_id ]
 then
-   echo -e " $R $dest_id deoes not exit ...please check it $N "
+   echo -e "$dest_id deoes not exit ...please check it "
    exit 1
 fi
 
@@ -54,7 +54,7 @@ then
          echo "deleting:$filepath"
          rm -rf $filepath
          echo ""deleted:$filepath
-      done < $file
+      done <<< $file
     else 
         echo -e"$R zipfile not created..please check it $N"
         exit 1        
