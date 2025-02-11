@@ -27,13 +27,13 @@ fi
 
 if [ ! -d $source_id ]
 then
-  echo -e"$R $source_id source file does not exist..please check it $N"
+  echo -e " $R $source_id source file does not exist..please check it $N "
   exit 1
 fi
 
 if [ ! -d $dest_id ]
 then
-   echo -e"$R $dest_id deoes not exit ...please check it $N"
+   echo -e " $R $dest_id deoes not exit ...please check it $N "
    exit 1
 fi
 
