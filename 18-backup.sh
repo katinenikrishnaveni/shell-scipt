@@ -33,7 +33,7 @@ fi
 
 if [ ! -d $dest_id ]
 then
-   echo -e"$R $dest1_id deoes not exit ...please check it $N"
+   echo -e"$R $dest_id deoes not exit ...please check it $N"
    exit 1
 fi
 
