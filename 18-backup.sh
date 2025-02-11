@@ -27,7 +27,7 @@ fi
 
 if [ ! -d $source_id ]
 then
-  echo "$R $source_id source file does not exist..please check it $N"
+  echo -e"$R $source_id source file does not exist..please check it $N"
   exit 1
 fi
 
