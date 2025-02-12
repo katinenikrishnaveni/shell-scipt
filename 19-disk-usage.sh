@@ -10,7 +10,7 @@ do
   PARTITION=$(echo $line|awk -F " " '{print $NF}')
   if [ $USAGE -gt $DISK_THESHOLD ]
   then
-     MSG=" High disk usage of partition:$PARTITION usage is:$UASGE "
+     MSG=" High disk usage of partition: $PARTITION usage is: $UASGE "
   fi
 done <<< $DISK_USAGE
 
