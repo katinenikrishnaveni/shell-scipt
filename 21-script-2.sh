@@ -2,4 +2,4 @@
 
 msg1="script2"
 
-echo "Hi:$msg"
+echo "Hi:$msg1"
