@@ -1,8 +1,8 @@
 #!/bin/bash
 
-DISK_USAGE=$(df -hT|grep xfs)
+DISK_USAGE=$(df -hT | grep xfs)
 DISK_THESHOLD=5
-MSG=" "
+MSG=""
 
 while read -r line
 do
