@@ -16,7 +16,8 @@ dest_id=$2
 days=${3:-14}
 
 usage(){
-    echo -e"$R usage:: sh 18-backup.sh <source_id> <dest_id> <days(optional)>"
+    #echo -e " $R usage:: sh 18-backup.sh <source_id> <dest_id> <days(optional)> "
+    echo -e " $R usage:: backup <source_id> <dest_id> <days(optional)> "
     exit 1
 }
 
