@@ -4,7 +4,7 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
-source_id="/home/ec2-user/app-log"
+
 logs_folder="/var/log/shellscript-log"
 log_file=$(echo $0 | cut -d "." -f1)
 Timestamp=$(date +%Y-%m-%d-%H-%M-%S)

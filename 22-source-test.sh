@@ -2,6 +2,7 @@
 
 source ./common.sh
 
+source_id="/home/ec2-user/app-log"
 echo "Script excution started at::$Timestamp" >>$Log_File_Name
 
 if [ $USERID -ne 0 ]
