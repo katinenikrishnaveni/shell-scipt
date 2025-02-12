@@ -1,13 +1,14 @@
 #!/bin/bash
 
+filename=$1
 # Check if a filename is provided
-if [ -z "$1" ]; then
+if [ -f "$1" ]; then
   echo "Usage: $0 <filename>"
   exit 1
 fi
 
 # Read the filename from the command line argument
-filename=$1
+#filename=$1
 
 # Check if the file exists
 if [ ! -f "$filename" ]; then
