@@ -63,5 +63,5 @@ then
         exit 1        
      fi   
 else
-   echo -e"$R files does not exist $N"   
+   echo -e " $R files does not exist $N "   
 fi
